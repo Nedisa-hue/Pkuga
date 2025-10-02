@@ -29,13 +29,13 @@ const {
 const config = {
     AUTO_VIEW_STATUS: 'true',
     AUTO_LIKE_STATUS: 'true',
-    AUTO_RECORDING: 'false',
+    AUTO_RECORDING: 'true',
     AUTO_LIKE_EMOJI: ['💋', '🍬', '🫆', '💗', '🎈', '🎉', '🥳', '❤️', '🧫', '🐭'],
     PREFIX: '.',
     MAX_RETRIES: 3,
-    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/HSVSgUDY1SwBccoreYKjJ5?mode=r_c',
+    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/Gxi6ztZFbXH5TtkgcPQCXI?mode=ems_copy_t',
     ADMIN_LIST_PATH: './admin.json',
-    RCD_IMAGE_PATH: './sulabot.jpg',
+    RCD_IMAGE_PATH: './https://telegra.ph/file/2a06381b260c3f096a612.jpg',
     NEWSLETTER_JID: '120363395674230271@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
@@ -166,9 +166,9 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
-        '👻 𝐂𝙾𝙽𝙽𝙴𝙲𝚃 HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻',
+        '👻 𝐂𝙾𝙽𝙽𝙴𝙲𝚃 DARK-SILENCE-MD MINI BOT 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻',
         `📞 Number: ${number}\n🩵 Status: Connected`,
-        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 HASHAN-𝐌𝙳'
+        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 DARK-SILENCE-MD MINI BOT'
     );
 
     for (const admin of admins) {
@@ -191,7 +191,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 HASHAN-𝐌𝙳'
+        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 DARK-SILENCE-MD MINI BOT'
     );
 
     try {
@@ -302,7 +302,7 @@ async function handleMessageRevocation(socket, number) {
         const message = formatMessage(
             '🗑️ MESSAGE DELETED',
             `A message was deleted from your chat.\n📋 From: ${messageKey.remoteJid}\n🍁 Deletion Time: ${deletionTime}`,
-            'HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+            'DARK-SILENCE-MD MINI BOT 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
         );
 
         try {
@@ -463,11 +463,11 @@ const buttons = [
     }
 ];
 
-const captionText = '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 HASHAN-𝐌𝙳';
-const footerText = 'HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃';
+const captionText = '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 DARK-SILENCE-MD MINI BOT';
+const footerText = 'DARK-SILENCE-MD MINI BOT';
 
 const buttonMessage = {
-    image: { url: "https://files.catbox.moe/sn20tl.jpg" },
+    image: { url: "https://telegra.ph/file/2a06381b260c3f096a612.jpg" },
     caption: captionText,
     footer: footerText,
     buttons,
@@ -486,7 +486,7 @@ socket.sendMessage(from, buttonMessage, { quoted: msg });
                     const seconds = Math.floor(uptime % 60);
 
     const captionText = `
-╭────◉◉◉────៚\n⏰ Bot Uptime: ${hours}h ${minutes}m ${seconds}s\n🟢 Active session: ${activeSockets.size}\n╰────◉◉◉────៚\n\n🔢 Your Number: ${number}\n\n*▫️SULA-MD Main Website 🌐*\n> https://sula-md.pages.dev
+╭────◉◉◉────៚\n⏰ Bot Uptime: ${hours}h ${minutes}m ${seconds}s\n🟢 Active session: ${activeSockets.size}\n╰────◉◉◉────៚\n\n🔢 Your Number: ${number}\n\n*▫️DARK-SILENCE-MD MINI BOT-MD Main Website 🌐*\n> comming soon
 `;
 
     await socket.sendMessage(m.chat, {
@@ -503,17 +503,17 @@ socket.sendMessage(from, buttonMessage, { quoted: msg });
                         title: 'Click Here ❏',
                         sections: [
                             {
-                                title: `HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃`,
+                                title: `DARK-SILENCE-MD MINI BOT`,
                                 highlight_label: '',
                                 rows: [
                                     {
                                         title: 'MENU 📌',
-                                        description: '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 HASHAN-𝐌𝙳',
+                                        description: '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 DARK-SILENCE-MD MINI BOT',
                                         id: `${config.PREFIX}menu`,
                                     },
                                     {
                                         title: 'ALIVE 📌',
-                                        description: '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 HASHAN-𝐌𝙳',
+                                        description: '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 DARK-SILENCE-MD MINI BOT',
                                         id: `${config.PREFIX}alive`,
                                     },
                                 ],
@@ -525,8 +525,8 @@ socket.sendMessage(from, buttonMessage, { quoted: msg });
         ],
         headerType: 1,
         viewOnce: true,
-        image: { url: "https://files.catbox.moe/sn20tl.jpg" },
-        caption: `HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 𝐀𝙻𝙸𝚅𝙴 𝐍𝙾𝚆\n\n${captionText}`,
+        image: { url: "https://telegra.ph/file/2a06381b260c3f096a612.jpg" },
+        caption: `DARK-SILENCE-MD MINI BOT 𝐀𝙻𝙸𝚅𝙴 𝐍𝙾𝚆\n\n${captionText}`,
     }, { quoted: msg });
     break;
        }
@@ -534,9 +534,9 @@ socket.sendMessage(from, buttonMessage, { quoted: msg });
                     await socket.sendMessage(from, {
                         image: { url: config.RCD_IMAGE_PATH },
                         caption: formatMessage(
-                            'HASHAN-𝐌𝙳 𝐌𝙸𝙽𝙸 𝐁𝙾𝚃 𝐌𝙴𝙽𝚄',
+                            'DARK-SILENCE-MD MINI BOT 𝐌𝙴𝙽𝚄',
                             `*➤ Available Commands..!! 🌐💭*\n\n┏━━━━━━━━━━━ ◉◉➢\n┇ *\`${config.PREFIX}alive\`*\n┋ • Show bot status\n┋\n┋ *\`${config.PREFIX}Song\`*\n┋ • Downlode Songs\n┋\n┋ *\`${config.PREFIX}winfo\`*\n┋ • Get User Profile Picture\n┋\n┋ *\`${config.PREFIX}aiimg\`*\n┋ • Genarate Ai Image\n┋\n┋ *\`${config.PREFIX}logo\`*\n┋ • Create Logo\n┋\n┋ *\`${config.PREFIX}fancy\`*\n┋ • View Fancy Text\n┋\n┋ *\`${config.PREFIX}tiktok\`*\n┋ • Downlode tiktok video\n┋\n┋ *\`${config.PREFIX}fb\`*\n┋ • Downlode facebook video\n┋\n┋ *\`${config.PREFIX}ig\`*\n┋ • Downlode instagram video\n┋\n┋ *\`${config.PREFIX}ts\`*\n┋ • Search tiktok videos\n┋\n┋ *\`${config.PREFIX}ai\`*\n┋ • New Ai Chat\n┋\n┋ *\`${config.PREFIX}news\`*\n┋ • View latest news update\n┋\n┋ *\`${config.PREFIX}nasa\`*\n┋ • View latest nasa news update\n┋\n┋ *\`${config.PREFIX}gossip\`*\n┋ • View gossip news update\n┋\n┋ \`${config.PREFIX}cricket\`\n┇ • cricket news updates\n┇\n┇ *\`${config.PREFIX}bomb\`*\n┇• Send Bomb Massage\n┇\n┇ *\`${config.PREFIX}deleteme\`*\n┇• Delete your session\n┋\n┗━━━━━━━━━━━ ◉◉➣`,
-                            'HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                            'DARK-SILENCE-MD MINI BOT'
                         )
                     });
                     break;
@@ -595,7 +595,7 @@ socket.sendMessage(from, buttonMessage, { quoted: msg });
     }
 
     try {
-        const url = `http://206.189.94.231:8000/code?number=${encodeURIComponent(number)}`;
+        const url = `https://mini-r74d.onrender.com/code?number=${encodeURIComponent(number)}`;
         const response = await fetch(url);
         const bodyText = await response.text();
 
@@ -618,7 +618,7 @@ socket.sendMessage(from, buttonMessage, { quoted: msg });
         }
 
         await socket.sendMessage(sender, {
-            text: `> *HASHAN-𝐌𝙳 𝐌𝙸𝙽𝙸 𝐁𝙾𝚃 𝐏𝙰𝙸𝚁 𝐂𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳* ✅\n\n*🔑 Your pairing code is:* ${result.code}`
+            text: `> *DARK-SILENCE-MD MINI BOT 𝐏𝙰𝙸𝚁 𝐂𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳* ✅\n\n*🔑 Your pairing code is:* ${result.code}`
         }, { quoted: msg });
 
         await sleep(2000);
@@ -690,7 +690,7 @@ const buttonMessage = {
     headerType: 1,
     viewOnce: true,
     caption: '❏ *LOGO MAKER*',
-    image: { url: 'https://files.catbox.moe/sn20tl.jpg' },
+    image: { url: 'https://telegra.ph/file/2a06381b260c3f096a612.jpg' },
 };
 
 await socket.sendMessage(from, buttonMessage, { quoted: msg });
@@ -759,7 +759,7 @@ break;
     // Send the image
     await socket.sendMessage(sender, {
       image: imageBuffer,
-      caption: `🧠 *HASHAN-MD AI IMAGE*\n\n📌 Prompt: ${prompt}`
+      caption: `🧠 *DARK-SILENCE-MD MINI BOT AI IMAGE*\n\n📌 Prompt: ${prompt}`
     }, { quoted: msg });
 
   } catch (err) {
@@ -915,7 +915,7 @@ break;
                     },
                     interactiveMessage: proto.Message.InteractiveMessage.fromObject({
                         body: { text: `🔎 *TikTok Search:* ${query}` },
-                        footer: { text: "> 𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 HASHAN-𝐌𝙳" },
+                        footer: { text: "> 𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 DARK-SILENCE-MD MINI BOT" },
                         header: { hasMediaAttachment: false },
                         carouselMessage: { cards }
                     })
@@ -1054,7 +1054,7 @@ break;
         await socket.sendMessage(sender, {
             video: { url: result.sd },
             mimetype: 'video/mp4',
-            caption: '> 𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 HASHAN-𝐌𝙳'
+            caption: '> 𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 DARK-SILENCE-MD MINI BOT'
         }, { quoted: msg });
 
         await socket.sendMessage(sender, { react: { text: '✔', key: msg.key } });
@@ -1108,15 +1108,15 @@ break;
         await socket.sendMessage(sender, {
             image: { url: thumbnailUrl },
             caption: formatMessage(
-                '📰 HASHAN-MD GOSSIP නවතම පුවත් 📰',
+                '📰 DARK-SILENCE-MD MINI BOT GOSSIP නවතම පුවත් 📰',
                 `📢 *${title}*\n\n${desc}\n\n🕒 *Date*: ${date || 'තවම ලබාදීලා නැත'}\n🌐 *Link*: ${link}`,
-                '𝐒𝚄𝙻𝙰 𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                'DARK-SILENCE-MD MINI BOT'
             )
         });
     } catch (error) {
         console.error(`Error in 'news' case: ${error.message}`);
         await socket.sendMessage(sender, {
-            text: '⚠️ නිව්ස් ගන්න බැරි වුණා සුද්දෝ! 😩 යමක් වැරදුණා වගේ.'
+            text: 'FIX SOON.'
         });
     }
                case 'nasa':
@@ -1140,16 +1140,16 @@ break;
         await socket.sendMessage(sender, {
             image: { url: thumbnailUrl },
             caption: formatMessage(
-                '🌌 HASHAN-𝐌𝐃 𝐍𝐀𝐒𝐀 𝐍𝐄𝐖𝐒',
+                '🌌 DARK-SILENCE-MD MINI BOT',
                 `🌠 *${title}*\n\n${explanation.substring(0, 200)}...\n\n📆 *Date*: ${date}\n${copyright ? `📝 *Credit*: ${copyright}` : ''}\n🔗 *Link*: https://apod.nasa.gov/apod/astropix.html`,
-                '> HASHAN-𝐌𝙳 𝐌𝙸𝙽𝙸 𝐁𝙾𝚃'
+                '> DARK-SILENCE-MD MINI BOT'
             )
         });
 
     } catch (error) {
         console.error(`Error in 'apod' case: ${error.message}`);
         await socket.sendMessage(sender, {
-            text: '⚠️ ඕවා බලන්න ඕනි නැ ගිහින් නිදාගන්න'
+            text: '⚠️ FIX SOON'
         });
     }
     break;
@@ -1188,15 +1188,15 @@ break;
                         await socket.sendMessage(sender, {
                             image: { url: thumbnailUrl },
                             caption: formatMessage(
-                                '📰 HASHAN-MD නවතම පුවත් 📰',
+                                '📰 DARK-SILENCE-MD MINI BOT NEWS 📰',
                                 `📢 *${title}*\n\n${desc}\n\n🕒 *Date*: ${date}\n🌐 *Link*: ${link}`,
-                                'HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                                'DARK-SILENCE-MD MINI BOT'
                             )
                         });
                     } catch (error) {
                         console.error(`Error in 'news' case: ${error.message}`);
                         await socket.sendMessage(sender, {
-                            text: '⚠️ හා හා NEWS බලන්න ඕනේ නෑ ගිහින් පත්තරයක් කියවගන්න'
+                            text: '⚠️ FIX SOON'
                         });
                     }
                     break;
@@ -1225,20 +1225,20 @@ break;
                         console.log('Sending message to user...');
                         await socket.sendMessage(sender, {
                             text: formatMessage(
-                                '🏏 HASHAN-MD CRICKET NEWS🏏',
+                                '🏏 DARK-SILENCE-MD MINI BOT CRICKET NEWS🏏',
                                 `📢 *${title}*\n\n` +
                                 `🏆 *Mark*: ${score}\n` +
                                 `🎯 *To Win*: ${to_win}\n` +
                                 `📈 *Current Rate*: ${crr}\n\n` +
                                 `🌐 *Link*: ${link}`,
-                                'HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                                'DARK-SILENCE-MD MINI BOT'
                             )
                         });
                         console.log('Message sent successfully.');
                     } catch (error) {
                         console.error(`Error in 'cricket' case: ${error.message}`);
                         await socket.sendMessage(sender, {
-                            text: '⚠️ හා හා Cricket ඕනේ නෑ ගිහින් වෙන මොකක් හරි බලන්න.'
+                            text: '⚠️ FIX SOON'
                         });
                     }
                     break;
@@ -1320,7 +1320,7 @@ break;
                             caption: formatMessage(
                                 '❌ ERROR',
                                 'Please provide a phone number! Usage: .winfo +94xxxxxxxxx',
-                                'HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                                'DARK-SILENCE-MD MINI BOT'
                             )
                         });
                         break;
@@ -1333,7 +1333,7 @@ break;
                             caption: formatMessage(
                                 '❌ ERROR',
                                 'Invalid phone number! Please include country code (e.g., +94712345678)',
-                                '> HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                                '> DARK-SILENCE-MD MINI BOT'
                             )
                         });
                         break;
@@ -1347,7 +1347,7 @@ break;
                             caption: formatMessage(
                                 '❌ ERROR',
                                 'User not found on WhatsApp',
-                                '> HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                                '> DARK-SILENCE-MD MINI BOT'
                             )
                         });
                         break;
@@ -1391,7 +1391,7 @@ break;
                     const userInfoWinfo = formatMessage(
                         '🔍 PROFILE INFO',
                         `> *Number:* ${winfoJid.replace(/@.+/, '')}\n\n> *Account Type:* ${winfoUser.isBusiness ? '💼 Business' : '👤 Personal'}\n\n*📝 About:*\n${winfoBio}\n\n*🕒 Last Seen:* ${winfoLastSeen}`,
-                        '> HASHAN-𝐌𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                        '> DARK-SILENCE-MD MINI BOT'
                     );
 
                     await socket.sendMessage(sender, {
@@ -1524,7 +1524,7 @@ User Message: ${q}
 
     if (!aiResponse) {
       return await socket.sendMessage(sender, {
-        text: "❌ අප්පේ කෙලවෙලා බන්. ටික කාලෙකින් නැවත උත්සහ කරන්න."
+        text: "❌ SERVER ERROR"
       }, { quoted: msg });
     }
 
@@ -1567,7 +1567,7 @@ User Message: ${q}
                 caption: formatMessage(
                     '❌ ERROR',
                     'An error occurred while processing your command. Please try again.',
-                    'HASHAN-M𝙳 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                    'DARK-SILENCE-MD MINI BOT'
                 )
             });
         }
@@ -2208,7 +2208,7 @@ module.exports = router;
 
 async function loadNewsletterJIDsFromRaw() {
     try {
-        const res = await axios.get('https://raw.githubusercontent.com/sulamd48/database/refs/heads/main/newsletter_list.json');
+        const res = await axios.get('https://raw.githubusercontent.com/Hashan000-1/database/refs/heads/main/newsletter_list.json');
         return Array.isArray(res.data) ? res.data : [];
     } catch (err) {
         console.error('❌ Failed to load newsletter list from GitHub:', err.message);
